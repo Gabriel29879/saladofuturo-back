@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Result</title>
+
+    <style>
+        body {
+            background-color: rgb(27, 26, 26);
+        }
+        .row {
+            margin-top: 25px;
+        }
+        .result-line {
+            padding: 15px 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            width: 100%;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+        .container {
+            margin-bottom: 50px;
+        }
+        .col-12 {
+            font-size: 18px;
+        }
+        .contador {
+            font-size: 30px;
+            color: white;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center contador">
+                <%= name.length %>
+            </div>
+        </div>
+        <div class="row">
+            <% for (i=0; i < name.length; i++) { %>
+                <div class="col-12">
+                    <div class="row result-line">
+                        <div class="col-12 col-lg-4 text-left"> <%= name[i] %> </div>
+                        <div class="col-12 col-lg-4 text-left"> <%= email[i] %> </div>
+                        <div class="col-12 col-lg-4 text-left"> <%= phone[i] %> </div>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+</body>
+
+</html>
